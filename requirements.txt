@@ -9,3 +9,8 @@ tensorflow==2.10.0; sys_platform != 'darwin'
 python-dotenv
 deepdow
 torch
+
+# API
+fastapi
+pytz
+uvicorn
