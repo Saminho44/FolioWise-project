@@ -40,4 +40,10 @@ optimized_results = minimize(neg_sharpe_ratio, initial_weights, args=(returns, c
 optimal_weights=optimized_results.x
 optimal_weights = pd.DataFrame(optimal_weights)
 
-print(optimal_weights)
+
+weight_baseline1 = np.round(optimal_weights, decimals=4)
+
+df_weights = pd.DataFrame(weight_baseline1)
+
+# Save to CSV
+df_weights.to_csv("Baseline_weights1.csv", index=False)

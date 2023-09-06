@@ -352,4 +352,9 @@ weight_table6 = generate_weights_table(network, dataloader_test)
 ######## FINAL WEIGHTS PORTFOLIO 1 #########
 
 weight_table_final = (weight_table + weight_table2 + weight_table3 + weight_table4 + weight_table5 + weight_table6)/6
-print(weight_table_final)
+pd.set_option('display.max_columns', None)
+weights_DeepDow1 = (weight_table_final.iloc[0]*100)
+df_weights = pd.DataFrame(weights_DeepDow1)
+
+# Save to CSV
+df_weights.to_csv("DeepDow_weights1.csv", index=False)
